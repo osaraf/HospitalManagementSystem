@@ -1,0 +1,83 @@
+[
+  {
+    "test": 1,
+    "host": "hospital-7",
+    "port": 9005,
+    "id": 7,
+    "name": "Wedel",
+    "totalBeds": 100,
+    "availableBeds": 80
+  },
+  {
+    "test": 1,
+    "host": "hospital-6",
+    "port": 9004,
+    "id": 6,
+    "name": "Bahrenfeld",
+    "totalBeds": 100,
+    "availableBeds": 80
+  },
+  {
+    "test": 1,
+    "host": "hospital-5",
+    "port": 9003,
+    "id": 5,
+    "name": "Eppendorf",
+    "totalBeds": 100,
+    "availableBeds": 80
+  },
+  {
+    "test": 1,
+    "host": "hospital-4",
+    "port": 9002,
+    "id": 4,
+    "name": "Blankenese",
+    "totalBeds": 100,
+    "availableBeds": 25
+  },
+  {
+    "test": 1,
+    "host": "hospital-3",
+    "port": 9001,
+    "id": 3,
+    "name": "St. Georg",
+    "totalBeds": 100,
+    "availableBeds": 33
+  },
+  {
+    "test": 1,
+    "host": "hospital-1",
+    "port": 8999,
+    "id": 1,
+    "name": "Veddel",
+    "totalBeds": 78,
+    "availableBeds": 23
+  },
+  {
+    "test": 1,
+    "host": "hospital-2",
+    "port": 9000,
+    "id": 2,
+    "name": "Norderstedt",
+    "totalBeds": 78,
+    "availableBeds": 30
+  },
+  {
+    "test": 1,
+    "host": "hospital-8",
+    "port": 9006,
+    "id": 8,
+    "name": "Eilbek",
+    "totalBeds": 100,
+    "availableBeds": 80
+  },
+  {
+    "test": 1,
+    "host": "hospital-9",
+    "port": 9007,
+    "id": 9,
+    "name": "Bergedorf",
+    "totalBeds": 100,
+    "availableBeds": 20
+  }
+]

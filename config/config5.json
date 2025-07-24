@@ -1,0 +1,11 @@
+[
+  {
+    "test": 1,
+    "host": "hospital-5",
+    "port": 9003,
+    "id": 5,
+    "name": "Eppendorf",
+    "totalBeds": 100,
+    "availableBeds": 80
+  }
+]

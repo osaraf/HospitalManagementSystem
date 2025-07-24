@@ -1,0 +1,301 @@
+version: '3.8'
+
+
+volumes:
+  prometheus-data:
+    driver: local
+  grafana-data:
+    driver: local
+
+
+services:
+  hospital-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-1
+    environment:
+      - CONFIG_FILE=config1.json
+      - HOSPITAL_INFO_FILE=hospitalInfos1.json
+      - IS_FIRST_NODE=true
+    volumes:
+      - ./config/config1.json:/app/config.json
+      - ./config/hospitalInfos1.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - webserver
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+  hospital-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-2
+    environment:
+      - CONFIG_FILE=config2.json
+      - HOSPITAL_INFO_FILE=hospitalInfos2.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-1
+      - ACQUAINTANCE_PORT=8999
+    volumes:
+      - ./config/config2.json:/app/config.json
+      - ./config/hospitalInfos2.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-1
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+
+  hospital-3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-3
+    environment:
+      - CONFIG_FILE=config3.json
+      - HOSPITAL_INFO_FILE=hospitalInfos3.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-2
+      - ACQUAINTANCE_PORT=9000
+    volumes:
+      - ./config/config3.json:/app/config.json
+      - ./config/hospitalInfos3.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-2
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+  hospital-4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-4
+    environment:
+      - CONFIG_FILE=config4.json
+      - HOSPITAL_INFO_FILE=hospitalInfos4.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-3
+      - ACQUAINTANCE_PORT=9001
+    volumes:
+      - ./config/config4.json:/app/config.json
+      - ./config/hospitalInfos4.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-3
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+  hospital-5:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-5
+    environment:
+      - CONFIG_FILE=config5.json
+      - HOSPITAL_INFO_FILE=hospitalInfos5.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-4
+      - ACQUAINTANCE_PORT=9002
+    volumes:
+      - ./config/config5.json:/app/config.json
+      - ./config/hospitalInfos5.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-4
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+
+  hospital-6:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-6
+    environment:
+      - CONFIG_FILE=config6.json
+      - HOSPITAL_INFO_FILE=hospitalInfos6.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-5
+      - ACQUAINTANCE_PORT=9003
+    volumes:
+      - ./config/config6.json:/app/config.json
+      - ./config/hospitalInfos6.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-5
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+
+  hospital-7:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-7
+    environment:
+      - CONFIG_FILE=config7.json
+      - HOSPITAL_INFO_FILE=hospitalInfos7.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-6
+      - ACQUAINTANCE_PORT=9004
+    volumes:
+      - ./config/config7.json:/app/config.json
+      - ./config/hospitalInfos7.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-6
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+
+  hospital-8:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-8
+    environment:
+      - CONFIG_FILE=config8.json
+      - HOSPITAL_INFO_FILE=hospitalInfos8.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-7
+      - ACQUAINTANCE_PORT=9005
+    volumes:
+      - ./config/config8.json:/app/config.json
+      - ./config/hospitalInfos8.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-7
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+
+  hospital-9:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-hospital-9
+    environment:
+      - CONFIG_FILE=config9.json
+      - HOSPITAL_INFO_FILE=hospitalInfos9.json
+      - IS_FIRST_NODE=false
+      - ACQUAINTANCE_HOST=hospital-8
+      - ACQUAINTANCE_PORT=9006
+    volumes:
+      - ./config/config9.json:/app/config.json
+      - ./config/hospitalInfos9.json:/app/hospitalInfos.json
+    networks:
+      - app_network
+    depends_on:
+      - hospital-8
+    stdin_open: true # Docker option -i
+    tty: true        # Docker option -t
+
+#  hospital-10:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    image: my-hospital-10
+#    environment:
+#      - CONFIG_FILE=config10.json
+#      - HOSPITAL_INFO_FILE=hospitalInfos10.json
+#      - IS_FIRST_NODE=false
+#      - ACQUAINTANCE_HOST=hospital-1
+#      - ACQUAINTANCE_PORT=8999
+#    volumes:
+#      - ./config/config10.json:/app/config.json
+#      - ./config/hospitalInfos10.json:/app/hospitalInfos.json
+#    networks:
+#      - app_network
+##    depends_on:
+##      - hospital-1
+#    stdin_open: true # Docker option -i
+#    tty: true        # Docker option -t
+
+
+
+  webserver:
+    build:
+      context: ./webserver
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - app_network
+
+  my-hospital-client:
+    build:
+      context: ./mein-hospital-client
+      dockerfile: Dockerfile
+    ports:
+      - "2000:80"
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor
+    container_name: cadvisor
+    privileged: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    devices:
+      - /dev/kmsg
+    networks:
+      - app_network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: hms_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    networks:
+      - app_network
+
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./loki-config:/etc/loki
+    restart: always
+
+#  grafana:
+#    image: grafana/grafana:latest
+#    container_name: hms_grafana
+#    ports:
+#      - "3002:3002"
+#    volumes:
+#      - grafana-data:/var/lib/grafana
+#    restart: unless-stopped
+#    networks:
+#      - app_network
+
+
+networks:
+  app_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.1.0/24

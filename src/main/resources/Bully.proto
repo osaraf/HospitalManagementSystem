@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service BullyService {
+  rpc StartElection (ElectionRequest) returns (ElectionResponse);
+  rpc SendCoordinator (CoordinatorRequest) returns (CoordinatorResponse);
+}
+
+message ElectionRequest {
+}
+
+message ElectionResponse {
+  bool answer = 1;
+}
+
+message CoordinatorRequest {
+  int32 senderId = 1;
+}
+
+message CoordinatorResponse {
+}

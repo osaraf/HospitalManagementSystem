@@ -1,0 +1,11 @@
+[
+  {
+    "test": 1,
+    "host": "hospital-6",
+    "port": 9004,
+    "id": 6,
+    "name": "Bahrenfeld",
+    "totalBeds": 100,
+    "availableBeds": 80
+  }
+]

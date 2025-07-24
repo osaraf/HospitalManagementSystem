@@ -1,0 +1,59 @@
+.hospitals-container {
+    margin: 20px;
+}
+
+.hospitals-table {
+    width: 100%;
+    border-collapse: separate; /* Needed for rounded corners */
+    border-spacing: 0; /* Removes default spacing */
+    border: 2px solid #4CAF50; /* Outer border of the table */
+    border-radius: 10px; /* Rounded corners for the table */
+}
+
+.hospitals-table th, .hospitals-table td {
+    border-bottom: 1px solid #ddd; /* Horizontal borders between rows */
+    padding: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.hospitals-table th {
+    border-top: 2px solid #4CAF50; /* Top border for header cells */
+}
+
+.hospitals-table tr:last-child td {
+    border-bottom: none; /* Remove border for the last row */
+}
+
+.hospitals-table td, .hospitals-table th {
+    border-right: 1px solid #ddd; /* Vertical borders */
+}
+
+.hospitals-table td:last-child, .hospitals-table th:last-child {
+    border-right: none; /* Remove right border for the last column */
+}
+
+.hospitals-table tr:hover {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+/* Optional: Change border style on hover */
+.hospitals-table tr:hover td {
+    border-bottom: 1px solid #4CAF50;
+}
+
+
+.refresh-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.refresh-button:hover {
+    background-color: #45a049;
+}

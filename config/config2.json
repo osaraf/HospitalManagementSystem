@@ -1,0 +1,11 @@
+[
+  {
+    "test": 1,
+    "host": "hospital-2",
+    "port": 9000,
+    "id": 2,
+    "name": "Norderstedt",
+    "totalBeds": 78,
+    "availableBeds": 30
+  }
+]

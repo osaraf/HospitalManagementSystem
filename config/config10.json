@@ -1,0 +1,11 @@
+[
+  {
+    "test": 1,
+    "host": "hospital-10",
+    "port": 9008,
+    "id": 10,
+    "name": "St.Pauli",
+    "totalBeds": 100,
+    "availableBeds": 22
+  }
+]

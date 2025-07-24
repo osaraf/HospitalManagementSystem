@@ -1,0 +1,11 @@
+[
+  {
+    "test": 1,
+    "host": "hospital-8",
+    "port": 9006,
+    "id": 8,
+    "name": "Eilbek",
+    "totalBeds": 100,
+    "availableBeds": 80
+  }
+]

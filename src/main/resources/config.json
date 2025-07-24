@@ -1,0 +1,11 @@
+[
+  {
+    "test": 0,
+    "host": "localhost",
+    "port": 9000,
+    "id": 0,
+    "name": "Bergedorf",
+    "totalBeds": 100,
+    "availableBeds": 20
+  }
+]

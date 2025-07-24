@@ -1,0 +1,8 @@
+{
+  "port": 12345,
+  "IP": "127.0.0.1",
+  "id": 5,
+  "name": "St. Georg",
+  "totalBeds": 100,
+  "availableBeds": 50
+}

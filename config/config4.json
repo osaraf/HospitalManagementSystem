@@ -1,0 +1,11 @@
+[
+  {
+    "test": 1,
+    "host": "hospital-4",
+    "port": 9002,
+    "id": 4,
+    "name": "Blankenese",
+    "totalBeds": 100,
+    "availableBeds": 25
+  }
+]
