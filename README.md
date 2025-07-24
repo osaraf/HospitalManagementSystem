@@ -1,20 +1,17 @@
 ## Projektübersicht
 
-Dieses Projekt ist ein Krankenhaus-Managementsystem mit Fokus auf die Echtzeitüberwachung der Bettenauslastung.  
-Es wurde mit dem Ziel entwickelt, eine hochverfügbare, skalierbare und benutzerfreundliche Lösung bereitzustellen,  
-mit der Krankenhäuser ihre aktuelle Auslastung verwalten und Informationen effizient austauschen können.
+Dieses Krankenhaus-Managementsystem wurde im Rahmen eines universitären Softwareentwicklungsprojekts realisiert.  
+Ziel war es, eine skalierbare, fehlertolerante und benutzerfreundliche Lösung zur **Echtzeitüberwachung der Bettenauslastung** in Krankenhäusern zu entwickeln.
 
 ### Technischer Fokus
 
-Der Schwerpunkt des Projekts liegt auf der Implementierung eines **verteilten Systems** mit folgenden Eigenschaften:
+Der Schwerpunkt des Projekts liegt auf der Konzeption und Umsetzung eines **verteilten Systems** mit folgenden Kernmerkmalen:
 
-- **Kommunikation über RPC (gRPC)** für effizienten, bidirektionalen Datenaustausch
-- **Leader-Wahl mittels Bully-Algorithmus** für Fehlertoleranz und Koordination
-- **Modulares Design** zur besseren Wartbarkeit und Erweiterbarkeit
-- **Frontend/Backend-Kopplung** über REST-APIs und dynamische Benutzeroberflächen
-- Einsatz von **Spring Boot**, **Java**, **JavaScript**, sowie optional **Docker** zur Bereitstellung
-
-Das System erlaubt die dynamische Einbindung neuer Krankenhausknoten und ermöglicht eine skalierbare Kommunikation und Steuerung im Netzwerk.
+- **Kommunikation über gRPC (Remote Procedure Call)** zur effizienten und bidirektionalen Datenübertragung
+- **Leader-Wahl über den Bully-Algorithmus** zur Ausfallsicherung und Koordination zwischen Knoten
+- **Modulares und wartbares Design**, inklusive sauberer Trennung von Frontend und Backend (MVC-Architektur)
+- Einsatz von Technologien wie **Java**, **Spring Boot**, **JavaScript** und optional **Docker** für Deployment
+- Unterstützung für die dynamische Integration mehrerer Krankenhausknoten
 
 
 Link zur Dokumentation:
