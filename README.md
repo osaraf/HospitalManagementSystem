@@ -13,6 +13,12 @@ Der Schwerpunkt des Projekts liegt auf der Konzeption und Umsetzung eines **vert
 - Einsatz von Technologien wie **Java**, **Spring Boot**, **JavaScript** und optional **Docker** für Deployment
 - Unterstützung für die dynamische Integration mehrerer Krankenhausknoten
 
+Team: 
+Osamah Rafea
+Dhruv Talhavia 
+Kacim Nbarek
+Kuzai Zaim 
+
 
 Link zur Dokumentation:
 
